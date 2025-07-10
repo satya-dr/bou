@@ -1,12 +1,26 @@
 body {
-	/*background-color: #FFDAB9;	*/
-	background-color: #000;
-	-webkit-transition:background-color linear 5s;
-	-moz-transition:background-color linear 5s;
-	-o-transition:background-color linear 5s;
-	-ms-transition:background-color linear 5s;
-	transition:background-color linear 5s;
-	overflow-x:hidden;
+    background: #FFDAB9; /* Fallback color */
+    position: relative;
+    overflow-x: hidden;
+    -webkit-transition: background-color linear 5s;
+    -moz-transition: background-color linear 5s;
+    -o-transition: background-color linear 5s;
+    -ms-transition: background-color linear 5s;
+    transition: background-color linear 5s;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    background: url('/bou/IMG20250304222521.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5; /* Adjust this value (0.1 to 0.9) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
 .container {
 	display: none;
